@@ -1,4 +1,5 @@
-import { restaurants } from "../../materials/mock";
+import { useCount } from "../count/use-count";
+import { Count } from "../count/Count";
 
 export const Restaurants = ({ name, menu, reviews }) => {
     if (!name || !menu) {
@@ -10,7 +11,9 @@ export const Restaurants = ({ name, menu, reviews }) => {
             <h2>{name}</h2>
             <h3>Menu</h3>
             <ul>
-                {menu.map((dish) => (<li>{dish.name}</li>))}
+                {menu.map((dish) => (
+                    <li>{dish.name} <Count /></li>
+                ))}
             </ul>
             {!reviews || (
                 <>
