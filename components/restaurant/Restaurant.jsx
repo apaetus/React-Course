@@ -1,7 +1,6 @@
-import { useCount } from "../count/use-count";
 import { Count } from "../count/Count";
 
-export const Restaurants = ({ name, menu, reviews }) => {
+export const Restaurant = ({ name, menu, reviews }) => {
     if (!name || !menu) {
         return null;
     }
