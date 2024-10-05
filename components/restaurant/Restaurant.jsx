@@ -1,4 +1,4 @@
-import { Count } from "../count/Count";
+import { DishCounter } from '../dish-counter/dish-counter';
 
 export const Restaurant = ({ name, menu, reviews }) => {
     if (!name || !menu) {
@@ -11,14 +11,18 @@ export const Restaurant = ({ name, menu, reviews }) => {
             <h3>Menu</h3>
             <ul>
                 {menu.map((dish) => (
-                    <li>{dish.name} <Count /></li>
+                    <li>
+                        {dish.name} <DishCounter />
+                    </li>
                 ))}
             </ul>
             {!reviews || (
                 <>
                     <h3>Reviews</h3>
                     <ul>
-                        {reviews.map((review) => ( <li>{review.text}</li> ))}
+                        {reviews.map((review) => (
+                            <li>{review.text}</li>
+                        ))}
                     </ul>
                 </>
             )}
