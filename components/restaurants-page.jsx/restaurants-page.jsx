@@ -38,6 +38,24 @@ export const RestaurantsPage = ({ title }) => {
                     reviews={activeRestaurant.reviews}
                 />
             )}
+
+            {activeRestaurant && (
+                <Restaurant
+                    key={activeRestaurant.id}
+                    name={activeRestaurant.name}
+                    menu={activeRestaurant.menu}
+                    reviews={activeRestaurant.reviews}
+                />
+            )}
+
+            {activeRestaurant && (
+                <Restaurant
+                    key={activeRestaurant.id}
+                    name={activeRestaurant.name}
+                    menu={activeRestaurant.menu}
+                    reviews={activeRestaurant.reviews}
+                />
+            )}
         </>
     );
 };

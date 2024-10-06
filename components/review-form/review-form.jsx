@@ -1,4 +1,4 @@
-import { Counter } from '../counter/Counter';
+import { Counter } from '../counter/counter';
 import { useForm } from './use-form';
 
 export const ReviewForm = () => {

@@ -7,9 +7,10 @@ const DEFAULT_FORM_VALUE = {
 };
 
 const SET_NAME_ACTION_TYPE = 'setName';
-const SET_TEXT_ACTION_TYPE = 'setName';
+const SET_TEXT_ACTION_TYPE = 'setText';
 const PLUS_RATING_ACTION_TYPE = 'plusRating';
 const MINUS_RATING_ACTION_TYPE = 'minusRating';
+const CLEAR_ACTION_TYPE = 'clearButton';
 
 const reducer = (state, action) => {
     const { type, payload } = action;
@@ -47,7 +48,7 @@ const reducer = (state, action) => {
                 };
             }
 
-        case 'clear':
+        case CLEAR_ACTION_TYPE:
             return { ...DEFAULT_FORM_VALUE };
 
         default:
@@ -76,8 +77,8 @@ export const useForm = () => {
         dispatch({ type: MINUS_RATING_ACTION_TYPE, payload: value });
     };
 
-    const clearButton = (value) => {
-        dispatch({ type: 'clear' });
+    const clearButton = () => {
+        dispatch({ type: CLEAR_ACTION_TYPE });
     };
 
     return {
