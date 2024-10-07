@@ -1,4 +1,5 @@
 import { DishCounter } from '../dish-counter/dish-counter';
+import { ReviewForm } from '../review-form/review-form';
 
 export const Restaurant = ({ name, menu, reviews }) => {
     if (!name || !menu) {
@@ -26,6 +27,8 @@ export const Restaurant = ({ name, menu, reviews }) => {
                     </ul>
                 </>
             )}
+
+            <ReviewForm />
         </main>
     );
 };
